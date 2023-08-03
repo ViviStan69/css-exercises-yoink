@@ -39,9 +39,11 @@ button {
   pointer-events: none;
   opacity: 0%;
   text-align: center;
+  transition: transform 300ms ease-in-out;
 }
+
 .popup-modal p {
-  margin-bottom: 24px
+  margin-bottom: 24px;
 }
 
 .backdrop {
@@ -55,6 +57,7 @@ button {
 .popup-modal.show {
   opacity: 100%;
   pointer-events: all;
+  transform: translate(420px, 69px);
 }
 
 .backdrop.show {
@@ -64,12 +67,10 @@ button {
 /* SOLUTION */
 
 .popup-modal {
-  transition: transform .3s ease-in-out, opacity .4s ease;
+  transition: transform 0.3s ease-in-out, opacity 0.4s ease;
   transform: translate(-50%, -100%);
 }
 
 .popup-modal.show {
   transform: translate(-50%, -50%);
 }
-
-
